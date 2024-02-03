@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "1",
+        "type": "Busywork",
+        "img": "./assets/busywork.jpg"
+    },
+    {
+        "_id": "2",
+        "type": "Cooking",
+        "img": "./assets/cooking.jpg"
+    },
+    {
+        "_id": "3",
+        "type": "Charity",
+        "img": "./assets/charity.jpg"
+    },
+    {
+        "_id": "4",
+        "type": "DIY",
+        "img": "./assets/diy.jpg"
+    },
+    {
+        "_id": "5",
+        "type": "Education",
+        "img": "./assets/education.jpg"
+    },
+    {
+        "_id": "6",
+        "type": "Music",
+        "img": "./assets/music.jpg"
+    },
+    {
+        "_id": "7",
+        "type": "Recreational",
+        "img": "./assets/recreational.jpg"
+    },
+    {
+        "_id": "8",
+        "type": "Relaxation",
+        "img": "./assets/relaxation.jpg"
+    },
+    {
+        "_id": "9",
+        "type": "Social",
+        "img": "./assets/social.jpg"
+    }
+]
