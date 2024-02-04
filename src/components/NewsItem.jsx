@@ -16,7 +16,7 @@ import CardMedia from '@mui/material/CardMedia';
 //     };
 // }
 
-export default function FeaturedPost() {
+export default function FeaturedPost({title}) {
 
     return (
         <Grid item xs={12} md={6}>
@@ -25,7 +25,7 @@ export default function FeaturedPost() {
                 margin:"20px" }}>
                     <CardContent sx={{ flex: 1 }}>
                         <Typography component="h2" variant="h5">
-                            Title
+                            {title}
                         </Typography>
                         <Typography variant="subtitle1" color="text.secondary">
                             Date

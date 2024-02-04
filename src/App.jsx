@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import NewsItem from './components/NewsItem';
+// import NewsItem from './components/NewsItem';
 import './styles/style.css';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
@@ -10,7 +10,8 @@ import CureMe from './components/CureMe'
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-
+import SearchBar from './components/SearchBar';
+import FetchData from './data/FetchData';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -46,10 +47,11 @@ function App() {
               }}>
                   News
                 </Typography>
-                <NewsItem />
-                <NewsItem />
-                <NewsItem />
-                <NewsItem />
+                {/* <NewsItem /> */}
+                {/* <NewsItem /> */}
+                {/* <NewsItem /> */}
+                {/* <NewsItem /> */}
+                <FetchData />
               </Item>
             </Grid>
             <Grid xs={8}>
