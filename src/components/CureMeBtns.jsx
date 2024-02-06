@@ -13,7 +13,6 @@ function CureMe(props) {
         <Grid item xs sx={{
             margin: "10px"
         }}>
-
             <Card>
                 <CardActionArea>
                     <CardMedia

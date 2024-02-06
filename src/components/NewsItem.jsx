@@ -6,16 +6,6 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 
-// interface FeaturedPostProps {
-//     post: {
-//         date: string;
-//         description: string;
-//         image: string;
-//         imageLabel: string;
-//         title: string;
-//     };
-// }
-
 export default function FeaturedPost({title}) {
 
     return (
@@ -41,7 +31,6 @@ export default function FeaturedPost({title}) {
                         component="img"
                         sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
                         image='./assets/placeholder.svg'
-                    // alt=
                     />
                 </Card>
             </CardActionArea>
