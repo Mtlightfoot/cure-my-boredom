@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import { Link } from 'react-router-dom';
+
 const pages = ['Saved Activities'];
 
 function ResponsiveAppBar() {
@@ -47,6 +49,16 @@ function ResponsiveAppBar() {
                     >
                         Cure My Boredom
                     </Typography>
+                    <nav>
+                        <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+                            <li style={{ marginRight: '10px' }}>
+                            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+                            </li>
+                            <li>
+                            <Link to="/activities" style={{ color: 'white', textDecoration: 'none' }}>Activities</Link>
+                            </li>
+                        </ul>
+                    </nav>
 
                     <Box sx={{
                         flexGrow: 1,
