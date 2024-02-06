@@ -10,8 +10,14 @@ import CureMe from './components/CureMe'
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
+// React Router imports
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Pages imports
 import SearchBar from './components/SearchBar';
 import FetchData from './data/FetchData';
+import Home from './pages/Home';
+import Activities from './pages/Activities';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,66 +30,16 @@ const Item = styled(Paper)(({ theme }) => ({
 function App() {
 
   return (
-    <div>
-      <Navbar />
-      <Container maxWidth="x1" sx={{
-        margin: "0",
-        padding: "0"
-      }}>
-
-        <Box sx={{
-          flexGrow: 1,
-          marginTop: "20px"
-        }}>
-          <Grid container spacing={2} columns={16} sx={{
-            justifyContent: "center",
-            textAlign: "center"
-          }}>
-            <Grid xs={8}>
-              <Item sx={{
-                minHeight: "100vh",
-              }}>
-              <Typography variant="h5" component="h2" sx={{
-              }}>
-                  News
-                </Typography>
-                {/* <NewsItem /> */}
-                {/* <NewsItem /> */}
-                {/* <NewsItem /> */}
-                {/* <NewsItem /> */}
-                <FetchData />
-              </Item>
-            </Grid>
-            <Grid xs={8}>
-              <Item sx={{
-                minHeight: "100vh"
-              }}>
-                <Typography variant="h5" component="h2">
-                  Find me an Activity
-                </Typography>
-                <CureMe />
-              </Item>
-            </Grid>
-          </Grid>
-        </Box>
-
-
-
-
-
-
-
-
-
-
-      </Container>
-
-
-
-
-
-    </div>
-  )
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Activities" element={<Activities />} />
+        </Routes>
+      </div>
+    </Router>
+    )
 
 
 }
