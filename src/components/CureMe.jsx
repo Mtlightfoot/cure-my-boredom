@@ -2,6 +2,7 @@ import activityType from '../data/ActivityTypes.json';
 import CureMeBtn from './CureMeBtns';
 import Grid from '@mui/material/Grid';
 
+
 function CureMe() {
     console.log(activityType)
     return (
@@ -10,6 +11,7 @@ function CureMe() {
             spacing={2}
             justifyContent="center"
             sx={{
+                
                 margin: "20px",
                 width: "100%"
             }}>

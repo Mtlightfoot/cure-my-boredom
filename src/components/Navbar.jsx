@@ -27,9 +27,14 @@ function ResponsiveAppBar() {
     return (
         <AppBar position="static" sx={{
             backgroundColor: "#292b2f",
+            borderBottom: '2px solid #225ad5', // Adding a border to the app bar
         }}>
             <Container maxWidth="xl">
-                <Toolbar>
+                <Toolbar sx={{
+                    justifyContent: 'center', // Aligning items evenly horizontally
+                    alignItems: 'center', // Centering items vertically
+                    
+                }}>
                     <Typography
                         variant="h4"
                         noWrap
@@ -43,6 +48,10 @@ function ResponsiveAppBar() {
                             letterSpacing: '0.5rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            // Adding a hover effect
+                            '&:hover': {
+                                color: '#225ad5',
+                            },
                         }}
                     >
                         Cure My Boredom

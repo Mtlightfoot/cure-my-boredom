@@ -7,11 +7,15 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 
+
 function CureMe(props) {
 
     return <div>
-        <Grid item xs sx={{
-            margin: "10px"
+        <Grid item xs sx={{ 
+
+            
+            margin: "10px",
+            backgroundcolor: "red",
         }}>
 
             <Card>
