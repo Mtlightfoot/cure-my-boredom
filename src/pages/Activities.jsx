@@ -9,14 +9,10 @@ import CureMe from '../components/CureMe'
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-// React Router imports
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-
 // Pages imports
 import SearchBar from '../components/SearchBar';
 import FetchData from '../data/FetchData';
 import Home from '../pages/Home';
-// import Activities from './pages/Activities';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -47,16 +43,12 @@ function Activities () {
                     <Item sx={{
                     minHeight: "100vh"
                     }}>
-                    {/* <Typography variant="h5" component="h2">
-                        Find me an Activity
-                    </Typography> */}
                     <CureMe />
                     </Item>
                 </Grid>
                 </Grid>
             </Box>
             </Container>
-            
         </div>
     )
 }
