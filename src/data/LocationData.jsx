@@ -1,38 +1,29 @@
-import React, { useState } from 'react';
-import SearchBar from '../components/SearchBar';
+import React, { useState, useEffect } from 'react';
 import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia } from '@mui/material';
 
-const FetchData = () => {
-  const apiURL = "https://gnews.io/api/v4/search?";
-  const key = "&country=us&max=10&token=67967b4c103927b15d99c699a065f0aa";
-  const [articleNumber, setArticleNumber] = useState(0);
+const LocationData = ({ latitude, longitude }) => {
   const [articles, setArticles] = useState([]);
 
-  const handleClear = () => {
-    setArticleNumber(0);
-  };
+  useEffect(() => {
+    if (latitude && longitude) {
+      const apiURL = `https://gnews.io/api/v4/top-headlines?geo=${latitude},${longitude}`;
+      const key = '&token=67967b4c103927b15d99c699a065f0aa';
+      const queryURL = apiURL + key;
 
-  const handleSearch = (searchString) => {
-    setArticleNumber(0);
-    const queryURL = apiURL + "q=" + searchString + key;
-
-    console.log('query: ', queryURL);
-
-    fetch(queryURL)
-      .then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        console.log(data);
-        console.log(data.articles);
-        
-        setArticles(data.articles);
-      });
-  };
+      fetch(queryURL)
+        .then(response => response.json())
+        .then(data => {
+            setArticles(data.articles || []);
+            console.log(data.articles);
+        })
+        .catch(error => {
+          console.error('Error fetching news:', error);
+        });
+    }
+  }, [latitude, longitude]); // Include latitude and longitude in the dependency array
 
   return (
     <div>
-      <SearchBar onSearch={handleSearch} onClear={handleClear} />
-
       <Grid container spacing={2}>
         {articles.map((article, index) => (
           <Grid item xs={12} key={index}>
@@ -64,4 +55,4 @@ const FetchData = () => {
   );
 };
 
-export default FetchData;
+export default LocationData;
