@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 // Pages imports
 import SearchBar from '../components/SearchBar';
 import FetchData from '../data/FetchData';
-import Home from '../pages/Home';
+import News from './News';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
