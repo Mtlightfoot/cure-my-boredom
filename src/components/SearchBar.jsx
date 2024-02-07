@@ -25,9 +25,9 @@ const SearchBar = ({ onSearch, onClear }) => {
       <button className="search" style={{ marginRight: "10px" }} onClick={handleSearch}>
         Search
       </button>
-      <button className="clear" onClick={handleClear}>
+      {/* <button className="clear" onClick={handleClear}>
         Clear Results
-      </button>
+      </button> */}
     </div>
   );
 };
