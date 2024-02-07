@@ -28,7 +28,7 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar position="static" sx={{
-            backgroundColor: "#292b2f",
+            backgroundColor: "#0661A8",
         }}>
             <Container maxWidth="xl">
                 <Toolbar>
@@ -45,6 +45,10 @@ function ResponsiveAppBar() {
                             letterSpacing: '0.5rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            '&:hover': {
+                                color: '#ff9800',
+                            },
+                              
                         }}
                     >
                         Cure My Boredom
