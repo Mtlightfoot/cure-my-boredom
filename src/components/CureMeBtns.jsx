@@ -1,20 +1,23 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid';
-
+import React, { useState } from 'react';
 
 function CureMe(props) {
 
+    const type = props.type.toLowerCase();
+
     return <div>
-        <Grid item xs sx={{
-            margin: "10px"
+
+        <Grid item sx={{
+            margin: "5px",
+            width: "250px"
         }}>
 
-            <Card>
+            <Card onClick={() => props.query(type)}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
