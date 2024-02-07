@@ -3,8 +3,10 @@ import FetchData from "../data/FetchData";
 
 function Home () {
     return (
-        <div>
-            <FetchData />
+
+        <div style={{ backgroundColor: "lightblue" }}>
+            <div>  <FetchData /></div>
+        
         </div>
     )
 }
