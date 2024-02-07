@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ActivityDetail from '../components/ActivityDetail';
 
 function ActivitiesMatt(props) {
     console.log(props)
 
     return <div>
-
-        {props.searchData ? (
+        {props.searchResult ? (
             <ActivityDetail
                 activity={props.searchResult.results.activity}
                 type={props.searchResult.results.type}
