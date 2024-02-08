@@ -8,10 +8,12 @@ function Home() {
   return (
     <div style={{ display: 'flex', textAlign: "center"}}>
       <div style={{ flex: 1, textAlign: "center"}}>
+
         <h1>News in your location</h1>
         <Geo setLocation={setLocation} />
         {location && <LocationData latitude={location.latitude} longitude={location.longitude} />}
       </div>
+
       <div style={{ flex: 1, backgroundColor: "#0661A8", margin: 10, textAlign: "center"}}>
         {/* Other content on the right-hand side */}
         <br />

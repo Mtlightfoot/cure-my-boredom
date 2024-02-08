@@ -74,6 +74,9 @@ function ResponsiveAppBar() {
                             <li style={{ marginRight: '10px' }}>
                             <Link to="/news" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>News</Link>
                             </li>
+                            <li style={{ marginRight: '10px' }}>
+                            <Link to="/news" style={{ color: 'white', textDecoration: 'none' }}>News</Link>
+                            </li>
                             <li>
                             <Link to="/activities" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Activities</Link>
                             </li>
