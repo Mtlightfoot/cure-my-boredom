@@ -8,19 +8,26 @@ import { CardActionArea } from '@mui/material';
 function ActivityDetail(props) {
     return (
         <div className="text-center">
-            <Card sx={{}}>
+            <Card sx={{ backgroundColor: "#313742" }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="140"
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        alt="green iguana"
+                        height="400"
+                        image={"../assets/" + props.type + ".jpg"}
+                        alt={"image of" + props.type}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h4" component="div" sx={{
+                            fontWeight: "800",
+                            backgroundColor: "#BE3D3E",
+                            color: "white",
+                            padding: "10px"
+                        }}>
                             {props.activity}
                         </Typography>
-                        <Typography variant="h5" color="text.secondary">
+                        <Typography variant="h5" color="text.secondary" sx={{
+                            color: "white"
+                        }}>
                             <ul>
                                 <li>Type: {props.type}</li>
                                 <li>Accessibility: {props.accessibility}</li>
