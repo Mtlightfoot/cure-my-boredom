@@ -38,51 +38,35 @@ function Activities() {
 
     return (
         <div>
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6}>
+                        <Item>
 
-            <Container maxWidth="x1" sx={{
-                backgroundColor: "#0661A8",
-                margin: "0",
-                padding: "0"
-            }}>
+                            <Typography variant="h5" component="h2" sx={{
+                                fontWeight: "600",
+                                marginBottom: "20px"
+                            }}>Click what type of Activity you are interested in!
+                            </Typography>
 
-                <Box sx={{
+                            <CureMe query={query} />
 
-                    flexGrow: 1,
-                    marginTop: "20px"
-                }}>
-                    <Grid container spacing={2} columns={16} sx={{
-                    }}>
-                        <Grid xs={8}>
-                            <Item sx={{
-
-                            }}>
-                                <Typography variant="h5" component="h2" sx={{
-                                    marginBottom: "20px", color: "#0661A8"
-                                }}>
-                                    Click what type of Activity you are interested in!
-                                </Typography>
-                                <CureMe query={query} />
-                            </Item>
-                        </Grid>
-
-
-                        <Grid xs={8}>
-                            <Item sx={{
-                                minHeight: "100vh",
-                                minWidth: "100%",
-                                color: "#0661A8"
-                            }}>
-                                <Typography variant="h5" component="h2" sx={{
-                                    margin: "15px 50px",
-                                }}>Activity</Typography>
-                                <ActivitiesMatt searchResult={searchResult} />
-                            </Item>
-                        </Grid>
+                        </Item>
                     </Grid>
-                </Box>
+                    <Grid item xs={12} md={6}>
+                        <Item>
 
-            </Container>
+                            <Typography variant="h5" component="h2" sx={{
+                                fontWeight: "600",
+                                marginBottom: "20px"
+                            }}>Activity</Typography>
 
+                            <ActivitiesMatt searchResult={searchResult} />
+
+                        </Item>
+                    </Grid>
+                </Grid>
+            </Box>
         </div>
     )
 }

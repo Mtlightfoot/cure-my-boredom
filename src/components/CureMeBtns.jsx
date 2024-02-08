@@ -17,7 +17,11 @@ function CureMe(props) {
             width: "250px"
         }}>
 
-            <Card onClick={() => props.query(type)}>
+            <Card sx={{
+                backgroundColor: "#313742",
+                color: "white",
+                boxShadow: "5px 5px 0px 0px #BE3D3E"
+            }} onClick={() => props.query(type)}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
