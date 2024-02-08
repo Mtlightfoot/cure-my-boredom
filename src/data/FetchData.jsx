@@ -3,8 +3,8 @@ import SearchBar from '../components/SearchBar';
 import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia } from '@mui/material';
 
 const FetchData = () => {
-  // const apiURL = "https://gnews.io/api/v4/search?";
-  // const key = "&country=us&max=10&token=67967b4c103927b15d99c699a065f0aa";
+  const apiURL = "https://gnews.io/api/v4/search?";
+  const key = "&country=us&max=10&token=67967b4c103927b15d99c699a065f0aa";
   const [articleNumber, setArticleNumber] = useState(0);
   const [articles, setArticles] = useState([]);
 
