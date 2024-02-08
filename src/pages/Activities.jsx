@@ -9,6 +9,10 @@ import CureMe from '../components/CureMe'
 import Typography from '@mui/material/Typography';
 import ActivitiesMatt from './ActivitiesMatt';
 import API from '../utils/BoredApi'
+// Pages imports
+// import SearchBar from '../components/SearchBar';
+// import FetchData from '../data/FetchData';
+// import News from './News';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -35,11 +39,14 @@ function Activities() {
     return (
         <div>
 
-            <Container maxWidth="xl" sx={{
-                border: "1px solid red"
+            <Container maxWidth="x1" sx={{
+                backgroundColor: "#0661A8",
+                margin: "0",
+                padding: "0"
             }}>
 
                 <Box sx={{
+
                     flexGrow: 1,
                     marginTop: "20px"
                 }}>
@@ -50,7 +57,7 @@ function Activities() {
 
                             }}>
                                 <Typography variant="h5" component="h2" sx={{
-                                    marginBottom: "20px"
+                                    marginBottom: "20px", color: "#0661A8"
                                 }}>
                                     Click what type of Activity you are interested in!
                                 </Typography>
@@ -62,10 +69,11 @@ function Activities() {
                         <Grid xs={8}>
                             <Item sx={{
                                 minHeight: "100vh",
-                                minWidth: "100%"
+                                minWidth: "100%",
+                                color: "#0661A8"
                             }}>
                                 <Typography variant="h5" component="h2" sx={{
-                                    margin: "15px 50px"
+                                    margin: "15px 50px",
                                 }}>Activity</Typography>
                                 <ActivitiesMatt searchResult={searchResult} />
                             </Item>
