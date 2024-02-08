@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import '../styles/style.css';
-import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -9,6 +8,7 @@ import CureMe from '../components/CureMe'
 import Typography from '@mui/material/Typography';
 import ActivitiesMatt from './ActivitiesMatt';
 import API from '../utils/BoredApi'
+
 // Pages imports
 // import SearchBar from '../components/SearchBar';
 // import FetchData from '../data/FetchData';
@@ -39,13 +39,21 @@ function Activities() {
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{
+                    margin: "20px"
+                }}>
+
                     <Grid item xs={12} md={6}>
-                        <Item>
+                        <Item sx={{
+                            minHeight: "60vh"
+                        }}>
 
                             <Typography variant="h5" component="h2" sx={{
-                                fontWeight: "600",
-                                marginBottom: "20px"
+                                fontWeight: "800",
+                                marginTop: "20px",
+                                marginBottom: "30px",
+                                color: "#313742",
+                                filter: "drop-shadow(0.5px 1px 0rem #BE3D3E)"
                             }}>Click what type of Activity you are interested in!
                             </Typography>
 
@@ -53,16 +61,20 @@ function Activities() {
 
                         </Item>
                     </Grid>
+
                     <Grid item xs={12} md={6}>
-                        <Item>
-
+                        <Item sx={{
+                            minHeight: "60vh",
+                            justifyContent: "center"
+                        }}>
                             <Typography variant="h5" component="h2" sx={{
-                                fontWeight: "600",
-                                marginBottom: "20px"
+                                fontWeight: "800",
+                                marginTop: "20px",
+                                marginBottom: "20px",
+                                color: "#313742",
+                                filter: "drop-shadow(0.5px 1px 0rem #BE3D3E)"
                             }}>Activity</Typography>
-
                             <ActivitiesMatt searchResult={searchResult} />
-
                         </Item>
                     </Grid>
                 </Grid>

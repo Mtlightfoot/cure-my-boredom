@@ -11,33 +11,29 @@ function CureMe(props) {
     const type = props.type.toLowerCase();
 
     return <div>
-
-        <Grid item sx={{
+        <Card sx={{
+            backgroundColor: "#313742",
+            color: "white",
+            boxShadow: "5px 5px 0px 0px #BE3D3E",
             margin: "5px",
             width: "250px"
-        }}>
+        }} onClick={() => props.query(type)}>
+            <CardActionArea>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image={props.img}
+                    alt={props.type}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {props.type}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
 
-            <Card sx={{
-                backgroundColor: "#313742",
-                color: "white",
-                boxShadow: "5px 5px 0px 0px #BE3D3E"
-            }} onClick={() => props.query(type)}>
-                <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image={props.img}
-                        alt={props.type}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {props.type}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Card>
 
-        </Grid>
     </div>
 }
 
