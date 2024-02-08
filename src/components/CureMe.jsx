@@ -9,6 +9,7 @@ function CureMe({query}) {
             spacing={2}
             justifyContent="center"
             sx={{
+                minHeight: "700px"
             }}>
             {activityType.map((activity) => <CureMeBtn
                 key={activity._id}

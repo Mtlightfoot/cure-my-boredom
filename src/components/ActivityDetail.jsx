@@ -6,9 +6,13 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 function ActivityDetail(props) {
+
     return (
         <div className="text-center">
-            <Card sx={{ backgroundColor: "#313742" }}>
+            <Card sx={{
+                backgroundColor: "#313742",
+                minHeight: "700px"
+            }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
