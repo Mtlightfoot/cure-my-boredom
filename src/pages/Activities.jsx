@@ -8,8 +8,12 @@ import Grid from '@mui/material/Unstable_Grid2';
 import CureMe from '../components/CureMe'
 import Typography from '@mui/material/Typography';
 import './ActivitiesMatt';
-// Pages imports
+import API from '../utils/BoredApi';
 
+// Pages imports
+// import SearchBar from '../components/SearchBar';
+// import FetchData from '../data/FetchData';
+// import News from './News';
 
 
 const Item = styled(Paper)(({ theme }) => ({
