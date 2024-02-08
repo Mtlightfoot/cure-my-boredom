@@ -47,6 +47,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                             '&:hover': {
                                 color: '#ff9800',
+                                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
                             },
                               
                         }}
@@ -54,15 +55,27 @@ function ResponsiveAppBar() {
                         Cure My Boredom
                     </Typography>
                     <nav>
-                        <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-                            <li style={{ marginRight: '10px' }}>
-                            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+                        <ul style={{ listStyleType: 'none', 
+                                    display: 'flex', 
+                                    justifyContent: 'flex-end', 
+                                    alignItems: 'center',
+                                    textDecoration: 'none',
+                                    '&hover':{
+                                        color: '#ff9800',
+                                    },
+                                     }}>
+                            <li style={{ marginRight: '10px',
+                                         textDecoration: 'none',
+                                         '&hover':{
+                                            color: '#ff9800',
+                                         }, }}>
+                            <Link to="/" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Home</Link>
                             </li>
                             <li style={{ marginRight: '10px' }}>
-                            <Link to="/news" style={{ color: 'white', textDecoration: 'none' }}>News</Link>
+                            <Link to="/news" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>News</Link>
                             </li>
                             <li>
-                            <Link to="/activities" style={{ color: 'white', textDecoration: 'none' }}>Activities</Link>
+                            <Link to="/activities" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Activities</Link>
                             </li>
                         </ul>
                     </nav>

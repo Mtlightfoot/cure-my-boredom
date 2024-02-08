@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch, onClear }) => {
   };
 
   return (
-    <div style={{ margin: "10px" }}>
+    <div style={{ margin: "10px"}}>
       <input
         type="text"
         id="search-string"
@@ -22,13 +22,13 @@ const SearchBar = ({ onSearch, onClear }) => {
         value={searchString}
         onChange={(e) => setSearchString(e.target.value)}
       />
-      <button className="search" style={{ marginRight: "10px" }} onClick={handleSearch}>
+      <button className="search" style={{ marginRight: "10px", alignItems: "center" }} onClick={handleSearch}>
         Search
       </button>
       {/* <button className="clear" onClick={handleClear}>
         Clear Results
       </button> */}
-    </div>
+    </div> 
   );
 };
 
