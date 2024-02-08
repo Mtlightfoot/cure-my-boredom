@@ -7,11 +7,10 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import CureMe from '../components/CureMe'
 import Typography from '@mui/material/Typography';
-
+import './ActivitiesMatt';
 // Pages imports
-import SearchBar from '../components/SearchBar';
-import FetchData from '../data/FetchData';
-import News from './News';
+
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

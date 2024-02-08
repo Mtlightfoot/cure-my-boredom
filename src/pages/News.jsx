@@ -5,12 +5,7 @@ import { Container } from "@mui/material";
 function News () {
     return (
         <div>
-            <Container>
-                <FetchData />
-
-
-            </Container>
-            
+            <FetchData />
         </div>
     )
 }
