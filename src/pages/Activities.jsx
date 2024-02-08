@@ -35,9 +35,8 @@ function Activities() {
     return (
         <div>
 
-            <Container maxWidth="x1" sx={{
-                margin: "0",
-                padding: "0"
+            <Container maxWidth="xl" sx={{
+                border: "1px solid red"
             }}>
 
                 <Box sx={{
