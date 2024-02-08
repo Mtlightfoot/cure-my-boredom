@@ -31,7 +31,20 @@ function ResponsiveAppBar() {
             backgroundColor: "#0661A8",
         }}>
             <Container maxWidth="xl">
-                <Toolbar>
+                <Toolbar sx={{ justifyContent: "flex-start" }}>
+                <IconButton
+                   size="large"
+                   aria-label="menu"
+                   aria-controls="menu-appbar"
+                   aria-haspopup="true"
+                   onClick={handleOpenNavMenu}
+                   color="inherit"
+                   sx={{ display: { xs: "block", md: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+
+                  
                     <Typography
                         variant="h4"
                         noWrap
@@ -54,11 +67,13 @@ function ResponsiveAppBar() {
                     >
                         Cure My Boredom
                     </Typography>
-                    <nav>
+                    <nav style={{ flexGrow: 1}}>
                         <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                             <li style={{ marginRight: '10px' }}>
-                            <Link to="/news" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>News</Link>
                             <Link to="/" style={{ color: 'white', textDecoration: 'none',boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Home</Link>
+                            </li>
+                            <li style={{ marginRight: '10px' }}>
+                            <Link to="/news" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>News</Link>
                             </li>
                             <li>
                             <Link to="/activities" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Activities</Link>
@@ -72,16 +87,9 @@ function ResponsiveAppBar() {
               display: { xs: "flex", md: "none" },
             }}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
+            
+              
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -125,7 +133,7 @@ function ResponsiveAppBar() {
           >
             Cure My Boredom
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex-end" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
