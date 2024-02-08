@@ -26,60 +26,45 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "#0661A8",
-      }}
-    >
-      <Container maxWidth="xl">
-        <Toolbar>
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Lato",
-              fontWeight: 700,
-              letterSpacing: "0.5rem",
-              color: "inherit",
-              textDecoration: "none",
-              "&:hover": {
-                color: "#ff9800",
-              },
-            }}
-          >
-            Cure My Boredom
-          </Typography>
-
-          <nav>
-            <ul
-              style={{
-                listStyleType: "none",
-                display: "flex",
-                justifyContent: "flex-end",
-                alignItems: "center",
-              }}
-            >
-              <li style={{ marginRight: "10px" }}>
-                <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/activities"
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                  Activities
-                </Link>
-              </li>
-            </ul>
-          </nav>
+    return (
+        <AppBar position="static" sx={{
+            backgroundColor: "#0661A8",
+        }}>
+            <Container maxWidth="xl">
+                <Toolbar>
+                    <Typography
+                        variant="h4"
+                        noWrap
+                        component="a"
+                        href="#app-bar-with-responsive-menu"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: "Lato",
+                            fontWeight: 700,
+                            letterSpacing: '0.5rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                            '&:hover': {
+                                color: '#ff9800',
+                                boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+                            },
+                              
+                        }}
+                    >
+                        Cure My Boredom
+                    </Typography>
+                    <nav>
+                        <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+                            <li style={{ marginRight: '10px' }}>
+                            <Link to="/news" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>News</Link>
+                            <Link to="/" style={{ color: 'white', textDecoration: 'none',boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Home</Link>
+                            </li>
+                            <li>
+                            <Link to="/activities" style={{ color: 'white', textDecoration: 'none', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', '&:hover': { color: '#ff9800' } }}>Activities</Link>
+                            </li>
+                        </ul>
+                    </nav>
 
           <Box
             sx={{
