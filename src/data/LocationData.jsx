@@ -8,59 +8,64 @@ const LocationData = ({ latitude, longitude }) => {
   useEffect(() => {
     if (latitude && longitude) {
       // fetching the latitude and longitude from the Geo.jsx and converting that into a country using the geocode API
-      fetch(`https://geocode.xyz/${latitude},${longitude}?json=1`)
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            console.log(data.address.country_code);
           // converting that country name into the two letter country code that gnews accepts
-          const countryName = data.country;
-          const countryCodeMap = {
-            Australia: 'au',
-            Brazil: 'br',
-            Canada: 'ca',
-            China: 'cn',
-            Egypt: 'eg',
-            France: 'fr',
-            Germany: 'de',
-            Greece: 'gr',
-            'Hong Kong': 'hk',
-            India: 'in',
-            Ireland: 'ie',
-            Israel: 'il',
-            Italy: 'it',
-            Japan: 'jp',
-            Netherlands: 'nl',
-            Norway: 'no',
-            Pakistan: 'pk',
-            Peru: 'pe',
-            Philippines: 'ph',
-            Portugal: 'pt',
-            Romania: 'ro',
-            'Russian Federation': 'ru',
-            Singapore: 'sg',
-            Spain: 'es',
-            Sweden: 'se',
-            Switzerland: 'ch',
-            Taiwan: 'tw',
-            Ukraine: 'ua',
-            'United Kingdom': 'gb',
-            'United States': 'us'
-          };
-          const countryCode = countryCodeMap[countryName];
-          setCountryCode(countryCode);
+          if (data && data.address && data.address.country_code) {
+            const countryCode = data.address.country_code.toUpperCase();
+            setCountryCode(countryCode);
 
-          // Using that country code in the API call to get the news filtered to the users location
-          const apiURL = `https://gnews.io/api/v4/top-headlines?country=${countryCode}&max=10&token=7a80bd4daab897185e40094dd2819580`;
+            const countryCodesMap = {
+              AU: 'au', // Australia
+              BR: 'br', // Brazil
+              CA: 'ca', // Canada
+              CN: 'cn', // China
+              EG: 'eg', // Egypt
+              FR: 'fr', // France
+              DE: 'de', // Germany
+              GR: 'gr', // Greece
+              HK: 'hk', // Hong Kong
+              IN: 'in', // India
+              IE: 'ie', // Ireland
+              IL: 'il', // Israel
+              IT: 'it', // Italy
+              JP: 'jp', // Japan
+              NL: 'nl', // Netherlands
+              NO: 'no', // Norway
+              PK: 'pk', // Pakistan
+              PE: 'pe', // Peru
+              PH: 'ph', // Philippines
+              PT: 'pt', // Portugal
+              RO: 'ro', // Romania
+              RU: 'ru', // Russian Federation
+              SG: 'sg', // Singapore
+              ES: 'es', // Spain
+              SE: 'se', // Sweden
+              CH: 'ch', // Switzerland
+              TW: 'tw', // Taiwan
+              UA: 'ua', // Ukraine
+              GB: 'gb', // United Kingdom
+              US: 'us', // United States
+            };
 
-          fetch(apiURL)
-            .then(response => response.json())
-            .then(data => {
+            // Using the country code so the news is filtered to the users location
+            const gnewsCountryCode = countryCodesMap[countryCode];
+            const apiURL = `https://gnews.io/api/v4/top-headlines?country=${gnewsCountryCode}&lang=en&max=10&token=5c2d5f1cb9b9c8208892c9bc4389d93a`;
+
+            fetch(apiURL)
+              .then(response => response.json())
+              .then(data => {
                 console.log(data);
-              setArticles(data.articles || []);
-            })
-            .catch(error => {
-              console.error('Error fetching news:', error);
-            });
+                setArticles(data.articles || []);
+              })
+              .catch(error => {
+                console.error('Error fetching news:', error);
+              });
+          } else {
+            console.error('Unexpected response from Nominatim API:', data);
+          }
         })
         .catch(error => {
           console.error('Error fetching country:', error);
@@ -68,8 +73,8 @@ const LocationData = ({ latitude, longitude }) => {
     }
   }, [latitude, longitude]);
 
-  // Making the news appear in the cards
   return (
+    // Making the news appear in the cards
     <div>
       <Grid container spacing={2}>
         {articles.map((article, index) => (
