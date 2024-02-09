@@ -26,12 +26,13 @@ const FetchData = () => {
 
   return (
     <Container>
-      <SearchBar onSearch={handleSearch} onClear={handleClear} />
-
       <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <SearchBar onSearch={handleSearch} onClear={handleClear} />
+        </Grid>
         {articles.map((article) => (
-          <Grid item sm={2} md={3} lg={6} xl={12}>
-            <CardActionArea component="a" href="#">
+          <Grid item sm={12} md={12} lg={6} xl={6} key={article.url}>
+            <CardActionArea component="a" href={article.url} target="_blank" rel="noopener noreferrer">
               <Card>
                 <CardMedia
                   component="img"
@@ -46,6 +47,9 @@ const FetchData = () => {
                   <Typography variant="body2" color="text.secondary">
                     {article.description}
                   </Typography>
+                  <Typography variant="subtitle1" color="primary">
+                    Continue reading...
+                  </Typography>
                 </CardContent>
               </Card>
             </CardActionArea>
@@ -57,3 +61,4 @@ const FetchData = () => {
 };
 
 export default FetchData;
+
