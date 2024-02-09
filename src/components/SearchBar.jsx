@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch, onClear }) => {
         type="text"
         id="search-string"
         placeholder="Enter your search"
-        style={{ marginRight: "10px", width: "400px" }}
+        style={{ marginRight: "10px", width: "300px" }}
         value={searchString}
         onChange={(e) => setSearchString(e.target.value)}
       />

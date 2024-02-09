@@ -52,7 +52,7 @@ const LocationData = ({ latitude, longitude }) => {
 
             // Using the country code so the news is filtered to the users location
             const gnewsCountryCode = countryCodesMap[countryCode];
-            const apiURL = `https://gnews.io/api/v4/top-headlines?country=${gnewsCountryCode}&lang=en&max=10&token=5c2d5f1cb9b9c8208892c9bc4389d93a`;
+            const apiURL = `https://gnews.io/api/v4/top-headlines?country=${gnewsCountryCode}&lang=en&max=10&token=d5a7f513dc78b3c13393cd72ba2bbcd7`;
 
             fetch(apiURL)
               .then(response => response.json())
