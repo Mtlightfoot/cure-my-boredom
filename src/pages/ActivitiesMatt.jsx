@@ -13,7 +13,7 @@ function ActivitiesMatt(props) {
                 participants={props.searchResult.results.participants}
                 price={props.searchResult.results.price}
             />) : (
-            <h3>No results to display</h3>
+            <h3>Awaiting magic button press</h3>
         )}
     </div>
 }
