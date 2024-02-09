@@ -23,6 +23,12 @@ function Home() {
 
   const [searchResult, setSearchResult] = useState("");
 
+  const query = () => {
+    API.search()
+      .then(res => { setSearchResult({ ...searchResult, results: res.data }) })
+      .catch(err => { console.log(err) });
+  }
+
   useEffect(() => {
     console.log(searchResult);
   }, [searchResult]);
@@ -87,7 +93,7 @@ function Home() {
 
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {}
+                      {searchResult.results ? searchResult.results[0].fact : "Loading..."}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -96,11 +102,6 @@ function Home() {
             </Item>
           </Grid>
         </Grid>
-
-
-
-
-
 
       </Box>
     </div>
