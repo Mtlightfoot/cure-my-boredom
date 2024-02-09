@@ -8,7 +8,7 @@ import News from "./pages/News";
 import Activities from "./pages/Activities";
 import Movies from "./pages/Movies";
 import Geo from "./components/Geo";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
