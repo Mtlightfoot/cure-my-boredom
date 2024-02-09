@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
 import SearchBar from '../components/SearchBar';
-import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia } from '@mui/material';
+import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia, Container } from '@mui/material';
 
 const FetchData = () => {
   const apiURL = "https://gnews.io/api/v4/search?";
-  const key = "&country=us&max=10&token=5c2d5f1cb9b9c8208892c9bc4389d93a";
-  const [articleNumber, setArticleNumber] = useState(0);
+  const key = "&country=us&max=10&token=d5a7f513dc78b3c13393cd72ba2bbcd7";
   const [articles, setArticles] = useState([]);
 
   const handleClear = () => {
-    setArticleNumber(0);
+    setArticles([]);
   };
 
   const handleSearch = (searchString) => {
-    setArticleNumber(0);
     const queryURL = apiURL + "q=" + searchString + key;
-
-    console.log('query: ', queryURL);
 
     fetch(queryURL)
       .then(function (response) {
@@ -24,43 +20,39 @@ const FetchData = () => {
       }).then(function (data) {
         console.log(data);
         console.log(data.articles);
-        
         setArticles(data.articles);
       });
   };
 
   return (
-    <div>
+    <Container>
       <SearchBar onSearch={handleSearch} onClear={handleClear} />
 
       <Grid container spacing={2}>
-        {articles.map((article, index) => (
-          <Grid item xs={12} key={index}>
+        {articles.map((article) => (
+          <Grid item sm={2} md={3} lg={6} xl={12}>
             <CardActionArea component="a" href="#">
-              <Card sx={{ display: 'flex', margin: "20px" }}>
-                <CardContent sx={{ flex: 1 }}>
-                  <Typography component="h2" variant="h5">
-                    {article.title}
-                  </Typography>
-                  <Typography variant="subtitle1" paragraph>
-                    {article.description}
-                  </Typography>
-                  <Typography variant="subtitle1" color="primary">
-                    Continue reading...
-                  </Typography>
-                </CardContent>
+              <Card>
                 <CardMedia
                   component="img"
-                  sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+                  sx={{ height: 140 }}
                   image={article.image}
                   alt={article.title}
                 />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {article.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {article.description}
+                  </Typography>
+                </CardContent>
               </Card>
             </CardActionArea>
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Container>
   );
 };
 
