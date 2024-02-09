@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import News from './pages/News';
 import Activities from './pages/Activities';
 import Movies from './pages/Movies'
-import Geo from './components/Geo';
 
 function App() {
 
