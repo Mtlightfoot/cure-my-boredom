@@ -22,6 +22,7 @@
     "geolocation-utils": "^1.2.5",
     "install": "^0.13.0",
     "npm": "^10.4.0",
+    "random-words": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-geocode": "^1.0.0-alpha.1",

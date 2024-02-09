@@ -23,8 +23,9 @@ const styles = {
 const homeLink = <NavLink style={styles.navLink} className="nav-link" to="/" end>Home</NavLink>;
 const newsSearchlink = <NavLink style={styles.navLink} className="nav-link" to="/News" end>News Search</NavLink>
 const activitiesLink = <NavLink style={styles.navLink} className="nav-link" to="/Activities" end>Activities</NavLink>
+const moviesLink = <NavLink style={styles.navLink} className="nav-link" to="/Movies" end>Movies</NavLink>
 
-const pages = [homeLink, newsSearchlink, activitiesLink];
+const pages = [homeLink, newsSearchlink, activitiesLink, moviesLink];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
