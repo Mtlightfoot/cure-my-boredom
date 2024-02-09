@@ -9,6 +9,8 @@ import Activities from "./pages/Activities";
 import Movies from "./pages/Movies";
 import Geo from "./components/Geo";
 import Footer from "./components/Footer";
+import { BookmarkAddSharp } from "@mui/icons-material";
+import Books from "./pages/Books";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/News" element={<News />} />
           <Route path="/Activities" element={<Activities />} />
           <Route path="/Movies" element={<Movies />} />
+          <Route path="/Books" element={<Books />} />
         </Routes>
         <Footer />
       </div>

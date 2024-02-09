@@ -40,8 +40,13 @@ const moviesLink = (
     Movies
   </NavLink>
 );
+const booksLink = (
+  <NavLink style={styles.navLink} className="nav-link" to="/Books" end>
+    Books
+  </NavLink>
+);
 
-const pages = [homeLink, newsSearchlink, activitiesLink, moviesLink];
+const pages = [homeLink, newsSearchlink, activitiesLink, moviesLink, booksLink];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
