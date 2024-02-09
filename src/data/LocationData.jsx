@@ -89,7 +89,9 @@ const LocationData = ({ latitude, longitude }) => {
                     {article.description}
                   </Typography>
                   <Typography variant="subtitle1" color="primary">
-                    Continue reading...
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                        Continue reading...
+                    </a>
                   </Typography>
                 </CardContent>
                 <CardMedia
