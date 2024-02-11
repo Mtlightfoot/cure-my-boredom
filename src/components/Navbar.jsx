@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
 import logo1 from "../images/logo1.png";
 import logo2 from "../images/logo2.png";
+import logo3 from "../images/logo3.png";
 
 const styles = {
   navLink: {
