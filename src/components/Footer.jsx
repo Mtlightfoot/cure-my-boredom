@@ -16,6 +16,7 @@ const style = {
 const linkStyle = {
   color: "white",
   textDecoration: "none",
+  fontStyle: "italic",
   "&: hover": {
     cursor: "pointer",
   },
