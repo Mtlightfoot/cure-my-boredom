@@ -2,7 +2,8 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 
 const style = {
-  fontSize: "15px",
+  height: "25px",
+  fontSize: "10px",
   textAlign: "center",
   padding: "20px",
   backgroundColor: "#0C0A3E",
@@ -17,8 +18,10 @@ const linkStyle = {
   color: "white",
   textDecoration: "none",
   fontStyle: "italic",
-  "&: hover": {
+  transition: "box-shadow 0.3s ease-in-out",
+  "&:hover": {
     cursor: "pointer",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
   },
 };
 
@@ -32,6 +35,7 @@ function Footer() {
           href="https://github.com/Mtlightfoot/cure-my-boredom"
           style={linkStyle}
           rel="noopener noreferrer"
+          target="_blank"
         >
           Boredom Busters
         </a>

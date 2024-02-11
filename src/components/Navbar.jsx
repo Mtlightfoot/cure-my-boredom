@@ -20,6 +20,7 @@ const styles = {
     color: "white",
     textDecoration: "none",
     letterSpacing: "2px",
+    height: "60px",
   },
 };
 
