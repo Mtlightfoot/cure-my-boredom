@@ -13,6 +13,9 @@ import { NavLink } from "react-router-dom";
 import logo1 from "../images/logo1.png";
 import logo2 from "../images/logo2.png";
 import logo3 from "../images/logo3.png";
+import AdbIcon from '@mui/icons-material/Adb';
+import Avatar from '@mui/material/Avatar';
+
 
 const styles = {
   navLink: {
@@ -24,12 +27,12 @@ const styles = {
   },
 };
 
-const logoStyles = {
-  maxWidth: "120px",
-  maxHeight: "120px",
-  marginRight: "15px",
-  backgroundColor: "#0C0A3E",
-};
+// const logoStyles = {
+//   maxWidth: "120px",
+//   maxHeight: "120px",
+//   marginRight: "15px",
+//   backgroundColor: "#0C0A3E",
+// };
 
 const homeLink = (
   <NavLink style={styles.navLink} className="nav-link" to="/" end>
@@ -69,7 +72,13 @@ function Navbar() {
     <AppBar position="static" sx={{ backgroundColor: "#0C0A3E" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={logo1} alt={`logo`} style={logoStyles} />
+          <Avatar src={logo1} sx={{
+            display: { xs: 'none', md: 'flex' },
+            mr: 1,
+            width: "100px",
+            height: "70px",
+            backgroundColor: "#0C0A3E",
+          }} alt={`logo`} />
           <Typography
             variant="h6"
             noWrap
