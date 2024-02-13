@@ -67,6 +67,16 @@ function Home() {
                 color: "white",
                 padding: "10px"
               }}>Welcome to Cure My Boredom</Typography>
+              <p> 
+                <br/>
+                Introducing the CureMyBoredom app
+                <br/>
+                Your ultimate boredom-busting companion!
+                Stay updated on local news and explore a wide range of suggestions for activities, movies, and books
+                all conveniently accessible through the NavBar. 
+                <br/>
+                Let us keep dullness at bay for you.
+</p>
 
             </Item>
           </Grid>
