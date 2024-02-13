@@ -10,6 +10,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { NavLink } from "react-router-dom";
+import logo1 from "../images/logo1.png";
+import logo2 from "../images/logo2.png";
+import logo3 from "../images/logo3.png";
 
 const styles = {
   navLink: {
@@ -17,7 +20,15 @@ const styles = {
     color: "white",
     textDecoration: "none",
     letterSpacing: "2px",
+    height: "60px",
   },
+};
+
+const logoStyles = {
+  maxWidth: "120px",
+  maxHeight: "120px",
+  marginRight: "15px",
+  backgroundColor: "#0C0A3E",
 };
 
 const homeLink = (
@@ -58,6 +69,7 @@ function Navbar() {
     <AppBar position="static" sx={{ backgroundColor: "#0C0A3E" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <img src={logo1} alt={`logo`} style={logoStyles} />
           <Typography
             variant="h6"
             noWrap
