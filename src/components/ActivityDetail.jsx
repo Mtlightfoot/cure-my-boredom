@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 function ActivityDetail(props) {
 
     return (
-        <div className="text-center">
+        <div className="text-center" align="center" justify="center" margin="auto">
             <Card sx={{
                 backgroundColor: "#313742",
                 minHeight: "700px"
@@ -32,12 +32,30 @@ function ActivityDetail(props) {
                         <Typography variant="h5" color="text.secondary" sx={{
                             color: "white"
                         }}>
-                            <ul>
-                                <li>Type: {props.type}</li>
-                                <li>Accessibility: {props.accessibility}</li>
-                                <li>Participants: {props.participants}</li>
-                                <li>Price: {props.price}</li>
-                            </ul>
+                            <Typography sx={{ color: "white", borderBottom: "1px solid #BE3D3E", width: "200px", marginBottom: "10px", fontWeight: "600" }} variant="h5" color="text.secondary">
+                                Type
+                            </Typography>
+                            <Typography sx={{ color: "white" }} variant="body1" color="text.secondary">
+                                {props.type}
+                            </Typography>
+                            <Typography sx={{ color: "white", borderBottom: "1px solid #BE3D3E", width: "200px", marginBottom: "10px", fontWeight: "600" }} variant="h5" color="text.secondary">
+                                Accessibility
+                            </Typography>
+                            <Typography sx={{ color: "white" }} variant="body1" color="text.secondary">
+                                {props.accessibility}
+                            </Typography>
+                            <Typography sx={{ color: "white", borderBottom: "1px solid #BE3D3E", width: "200px", marginBottom: "10px", fontWeight: "600" }} variant="h5" color="text.secondary">
+                                Participants
+                            </Typography>
+                            <Typography sx={{ color: "white" }} variant="body1" color="text.secondary">
+                                {props.participants}
+                            </Typography>
+                            <Typography sx={{ color: "white", borderBottom: "1px solid #BE3D3E", width: "200px", marginBottom: "10px", fontWeight: "600" }} variant="h5" color="text.secondary">
+                                Price
+                            </Typography>
+                            <Typography sx={{ color: "white" }} variant="body1" color="text.secondary">
+                                {props.price}
+                            </Typography>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
