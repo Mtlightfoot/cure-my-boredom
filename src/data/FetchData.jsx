@@ -4,7 +4,7 @@ import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia, Contain
 
 const FetchData = () => {
   const apiURL = "https://gnews.io/api/v4/search?";
-  const key = "&country=us&max=10&token=d5a7f513dc78b3c13393cd72ba2bbcd7";
+  const key = "&country=us&max=10&token=7a80bd4daab897185e40094dd2819580";
   const [articles, setArticles] = useState([]);
 
   const handleClear = () => {
