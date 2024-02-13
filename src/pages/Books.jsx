@@ -44,10 +44,6 @@ function Books() {
         }
     };
 
-    useEffect(() => {
-        fetchRandomBook();
-    }, []);
-
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
@@ -129,7 +125,8 @@ function Books() {
                                         </CardActionArea>
                                     </Card>
                                 ) : (
-                                    <h3>Awaiting magic button press</h3>
+                                    <div><div class="eyeLoader"></div>
+                                        <h3>Awaiting Magic Button Press...</h3></div>
                                 )}
                             </Grid>
                         </Item>
