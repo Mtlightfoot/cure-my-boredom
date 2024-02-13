@@ -1,6 +1,6 @@
 # Cure My Boredom
 
-Welcome Cure My Boredom - your go-to destination for staying informed, entertained, and inspired! This app seamlessly combines local news updates, effortless article searches, a variety of boredom-busting activities, and the excitement of discovering random movies and books, all within a user-friendly interface.
+Welcome to Cure My Boredom - your go-to destination for staying informed, entertained, and inspired! This app seamlessly combines local news updates, effortless article searches, a variety of boredom-busting activities, and the excitement of discovering random movies and books, all within a user-friendly interface.
 
 
 # Usage
@@ -41,7 +41,6 @@ Azza Abdelrahman
 Matthew Lightfoot
 
 Lotanna Amboi
-
 
 
 # Screenshot and Links 
