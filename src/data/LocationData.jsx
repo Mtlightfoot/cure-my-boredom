@@ -7,7 +7,7 @@ const LocationData = ({ latitude, longitude }) => {
 
   useEffect(() => {
     if (latitude && longitude) {
-      // fetching the latitude and longitude from the Geo.jsx and converting that into a country using the geocode API
+      // fetching the latitude and longitude from the Geo.jsx and converting that into a country using the openstreetmap API
       fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
         .then(response => response.json())
         .then(data => {
@@ -64,7 +64,7 @@ const LocationData = ({ latitude, longitude }) => {
                 console.error('Error fetching news:', error);
               });
           } else {
-            console.error('Unexpected response from Nominatim API:', data);
+            console.error('Unexpected response from openstreet map API:', data);
           }
         })
         .catch(error => {
