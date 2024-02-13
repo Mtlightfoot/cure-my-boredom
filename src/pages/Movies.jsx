@@ -104,22 +104,14 @@ function Movies() {
                                         </CardContent>
                                     </CardActionArea>
                                 </Card>
-                            ) : (
-                                <h3>Awaiting magic button press</h3>
+                            ) : (<div><div class="eyeLoader"></div>
+                                <h3>Awaiting Magic Button Press...</h3></div>
                             )}
                         </Grid>
-
-
                     </Item>
-
                 </Grid>
-
-
-
             </Grid>
         </Box>
-
-
     </div>
 }
 
