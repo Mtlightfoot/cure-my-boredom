@@ -58,7 +58,7 @@ function Home() {
 
           <Grid item xs={12} md={8}>
             <Item sx={{
-              minHeight: "40vh",
+              minHeight: "30vh",
               justifyContent: "center"
             }}>
               <Typography variant="h5" component="h2" sx={{
@@ -73,7 +73,7 @@ function Home() {
 
           <Grid item xs={12} md={4}>
             <Item sx={{
-              minHeight: "40vh",
+              minHeight: "30vh",
               justifyContent: "center"
             }}>
               <Typography variant="h5" component="h2" sx={{
@@ -93,16 +93,15 @@ function Home() {
 
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {searchResult.results ? searchResult.results[0].fact : "Loading..."}
+                      {searchResult.results ? searchResult.results[0].fact : <div><div class="eyeLoader"></div>
+                        <h3>Awaiting Magic Button Press...</h3></div>}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-
             </Item>
           </Grid>
         </Grid>
-
       </Box>
     </div>
   );
