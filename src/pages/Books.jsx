@@ -130,7 +130,8 @@ function Books() {
                                     </Card>
                                 ) : (
                                     <div><div class="eyeLoader"></div>
-                                        <h3>Awaiting Magic Button Press...</h3></div>
+                                        <h3>Awaiting Magic Button Press...</h3>
+                                        <p>Beware!! Due to the random nature you don't know what you're going to get</p></div>
                                 )}
                             </Grid>
                         </Item>
