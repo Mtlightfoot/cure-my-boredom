@@ -65,7 +65,8 @@ function Home() {
                 fontWeight: "800",
                 backgroundColor: "#BE3D3E",
                 color: "white",
-                padding: "10px"
+                padding: "10px",
+                marginBottom: "50px"
               }}>Welcome to Cure My Boredom</Typography>
 
               <Typography variant="h6" component="h2" sx={{
