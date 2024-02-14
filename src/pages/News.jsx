@@ -27,7 +27,7 @@ const News = () => {
 
                 <Grid item xs={12} md={6}>
                     <Item sx={{
-                        minHeight: "70vh"
+                        minHeight: "30vh"
                     }}>
                     <Typography variant="h5" component="h2" sx={{
                                 fontWeight: "800",
