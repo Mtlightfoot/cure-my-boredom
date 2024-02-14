@@ -97,6 +97,11 @@ function Navbar() {
               color: "inherit",
               textDecoration: "none",
               fontSize: "2em",
+              '&:hover': {
+                color: "pink",
+                transform: "scale(1.005)",
+                transition: "0.2s"
+              }
             }}
           >
             Cure My Boredom
@@ -133,7 +138,9 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem
-                  sx={{ backgroundColor: "#313742" }}
+                  sx={{
+                    backgroundColor: "#313742"
+                  }}
                   key={page}
                   onClick={handleCloseNavMenu}
                 >
@@ -171,7 +178,13 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2, color: "white", display: "block",
+                  '&:hover': {
+                    transition: "0.2s",
+                    backgroundColor: "#BE3D3E"
+                  }
+                }}
               >
                 {page}
               </Button>
