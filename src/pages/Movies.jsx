@@ -73,7 +73,7 @@ function Movies() {
                                             <CardMedia
                                                 component="img"
                                                 image={searchResult.results.Poster}
-                                                alt="green iguana"
+                                                alt={"A poster of " + searchResult.results.Title}
                                                 sx={{
                                                     width: "300px", marginTop: "20px"
                                                 }}
