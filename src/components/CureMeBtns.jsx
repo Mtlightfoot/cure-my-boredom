@@ -15,7 +15,7 @@ function CureMe(props) {
             color: "white",
             boxShadow: "5px 5px 0px 0px #BE3D3E",
             margin: "5px",
-            width: "250px"
+            width: "220px"
         }} onClick={() => props.query(type)}>
             <CardActionArea>
                 <CardMedia

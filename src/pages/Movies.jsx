@@ -21,6 +21,10 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
+const height = {
+    minHeight: "80vh"
+}
+
 function Movies() {
 
     const [searchResult, setSearchResult] = useState("");
@@ -35,7 +39,7 @@ function Movies() {
         console.log(searchResult);
     }, [searchResult]);
 
-    return <div>
+    return <div style={height}>
 
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2} sx={{
@@ -44,7 +48,7 @@ function Movies() {
 
                 <Grid item xs={12} md={12}>
                     <Item sx={{
-                        minHeight: "60vh"
+                        minHeight: "70vh"
                     }}>
                         <Button onClick={() => query(generate())} variant="contained" sx={{
                             fontWeight: "800",

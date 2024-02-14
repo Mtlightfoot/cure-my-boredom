@@ -13,7 +13,7 @@ function LocationData({ latitude, longitude }) {
       fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
         .then(response => response.json())
         .then(data => {
-            console.log(data.address.country_code);
+          console.log(data.address.country_code);
           // converting that country name into the two letter country code that gnews accepts
           if (data && data.address && data.address.country_code) {
             const countryCode = data.address.country_code.toUpperCase();
@@ -83,15 +83,15 @@ function LocationData({ latitude, longitude }) {
     <div>
       {loading ? ( // renders loading if it is true
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          <CircularProgress />
-        </div>
+          <div><div class="eyeLoader"></div>
+            <h3>Awaiting Magic Button Press...</h3></div>        </div>
       ) : (
         // renders cards if loading is false
         <Grid container spacing={2}>
           {articles.map((article, index) => (
             <Grid item xs={12} key={index}>
               <CardActionArea component="a" href="#">
-                <Card sx={{ display: 'flex', margin: "20px" }}>
+                <Card sx={{ display: 'flex' }}>
                   <CardContent sx={{ flex: 1 }}>
                     <Typography component="h2" variant="h5">
                       {article.title}
