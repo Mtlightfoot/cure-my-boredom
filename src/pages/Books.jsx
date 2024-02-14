@@ -23,6 +23,10 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
+const height = {
+    minHeight: "80vh"
+}
+
 function Books() {
     const [book, setBook] = useState(null);
 
@@ -45,11 +49,11 @@ function Books() {
     };
 
     return (
-        <div>
+        <div style={height}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{ margin: "20px" }}>
                     <Grid item xs={12} md={12}>
-                        <Item sx={{ minHeight: "60vh" }}>
+                        <Item sx={{ minHeight: "70vh" }}>
                             <Button onClick={fetchRandomBook} variant="contained" sx={{
                                 fontWeight: "800",
                                 marginTop: "20px",

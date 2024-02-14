@@ -67,16 +67,28 @@ function Home() {
                 color: "white",
                 padding: "10px"
               }}>Welcome to Cure My Boredom</Typography>
-              <p> 
-                <br/>
-                Introducing the CureMyBoredom app
-                <br/>
-                Your ultimate boredom-busting companion!
+
+              <Typography variant="h6" component="h2" sx={{
+                fontWeight: "600",
+                color: "#313742",
+                padding: "10px",
+              }}>Introducing the CureMyBoredom app</Typography>
+
+              <Typography variant="h6" component="h2" sx={{
+                fontWeight: "600",
+                fontSize: "16px",
+                color: "#313742",
+                padding: "10px"
+              }}>Your ultimate boredom-busting companion!
                 Stay updated on local news and explore a wide range of suggestions for activities, movies, and books
-                all conveniently accessible through the NavBar. 
-                <br/>
-                Let us keep dullness at bay for you.
-</p>
+                all conveniently accessible through the NavBar.</Typography>
+
+              <Typography variant="h6" component="h2" sx={{
+                fontWeight: "600",
+                color: "#313742",
+                padding: "10px",
+                fontSize: "16px"
+              }}>Let us keep dullness at bay for you.</Typography>
 
             </Item>
           </Grid>
@@ -97,7 +109,7 @@ function Home() {
                 backgroundColor: "#313742",
                 color: "white",
                 boxShadow: "5px 5px 0px 0px #BE3D3E",
-                margin: "50px",
+                margin: "20px 5px",
               }}>
                 <CardActionArea>
 

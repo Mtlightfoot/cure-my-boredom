@@ -8,7 +8,7 @@ const style = {
   padding: "20px",
   backgroundColor: "#0C0A3E",
   color: "white",
-  position: "fixed",
+  position: "relative",
   bottom: 0,
   left: 0,
   right: 0,
