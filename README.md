@@ -1,9 +1,23 @@
 # Cure My Boredom
 
+## Description
 Welcome to Cure My Boredom - your go-to destination for staying informed, entertained, and inspired! This app seamlessly combines local news updates, effortless article searches, a variety of boredom-busting activities, and the excitement of discovering random movies and books, all within a user-friendly interface.
 
+![alt text](https://img.shields.io/badge/License-MIT-green)
 
-# Usage
+## Table of Contents
+
+* [Usage](#usage)
+* [Installation](#installation)
+* [Credits](#credits)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [Screenshot and Links](#screenshot-and-links)
+* [Link to Webpage](#link-to-webpage)
+* [License](#license)
+* [React and Vite](#react--vite)
+
+## Usage
 Navigation: Navigate through the app sections listed on the homepage: Local News, News Search, Activities, Movies, and Books.
 Local News: View curated news articles relevant to your location, complete with summaries and thumbnails.
 
@@ -16,7 +30,7 @@ Movies: Click the button to discover a random movie suggestion, including title,
 Books: Click the button to get a random book recommendation, including title, author, and blurb.
 
 
-# Installation
+## Installation
 Clone the repository.
 
 Navigate to the project directory.
@@ -26,13 +40,13 @@ Run npm install to install dependencies.
 Run npm dev to start the development server.
 
 
-# Credits 
+## Credits 
 A huge gratitude goes out to the bootcamp team for their unwavering support throughout the project, equipping us with the necessary tools for success thus far. The API providers, documentation, and bootstrap have played a significant role in carrying much of the workload for this project.
 
+https://css-loaders.com/ was used for the eyes on the loading animations
 
 
-
-# Contributors
+## Contributors
 
 Amaal Abdule
 
@@ -43,7 +57,7 @@ Matthew Lightfoot
 Lotanna Amboi
 
 
-# Screenshot and Links 
+## Screenshot and Links 
 ![Landing page](public/assets/Screenshots/1.png)
 
 ![Home page](public/assets/Screenshots/2.png)
@@ -55,12 +69,15 @@ Lotanna Amboi
 ![Books page](public/assets/Screenshots/5.png)
 
 
+## Link to Webpage
+https://curemyboredom.netlify.app/
 
-# License
+
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-# React + Vite
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

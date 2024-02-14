@@ -40,12 +40,13 @@ function Activities() {
         <div>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{
-                    margin: "20px"
+                    margin: "20px",
+                    minHeight: "70vh"
                 }}>
 
                     <Grid item xs={12} md={6}>
                         <Item sx={{
-                            minHeight: "60vh"
+                            minHeight: "100%"
                         }}>
 
                             <Typography variant="h5" component="h2" sx={{
@@ -64,7 +65,7 @@ function Activities() {
 
                     <Grid item xs={12} md={6}>
                         <Item sx={{
-                            minHeight: "60vh",
+                            minHeight: "100%",
                             justifyContent: "center"
                         }}>
                             <Typography variant="h5" component="h2" sx={{
