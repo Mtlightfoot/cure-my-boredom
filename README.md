@@ -46,15 +46,15 @@ https://css-loaders.com/ was used for the eyes on the loading animations
 
 ## Technologies Used
 Apis used on this project are: 
-https://www.boredapi.com/
-https://www.omdbapi.com/
-https://gnews.io/
-https://api-ninjas.com/api/facts
-https://developers.google.com/books
+Bored API - https://www.boredapi.com/
+OMDB API - https://www.omdbapi.com/
+GNews - https://gnews.io/
+Facts API - https://api-ninjas.com/api/facts
+Google Books API - https://developers.google.com/books
 
 Libraries used on this project are:
-https://www.npmjs.com/package/random-words
-https://mui.com/
+Random Words NPM - https://www.npmjs.com/package/random-words
+Material UI - https://mui.com/
 
 ## Contributors
 
