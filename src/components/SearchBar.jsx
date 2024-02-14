@@ -45,6 +45,7 @@ const InputElement = styled('input')(
       border-color: ${blue[400]};
       box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
     }
+    
 
     &:focus-visible {
       outline: 0;
