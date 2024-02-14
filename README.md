@@ -10,7 +10,7 @@ Welcome to Cure My Boredom - your go-to destination for staying informed, entert
 * [Usage](#usage)
 * [Installation](#installation)
 * [Credits](#credits)
-* [Usage](#usage)
+* [Technologies Used](#technologies-used)
 * [Contributors](#contributors)
 * [Screenshot and Links](#screenshot-and-links)
 * [Link to Webpage](#link-to-webpage)
@@ -19,6 +19,7 @@ Welcome to Cure My Boredom - your go-to destination for staying informed, entert
 
 ## Usage
 Navigation: Navigate through the app sections listed on the homepage: Local News, News Search, Activities, Movies, and Books.
+
 Local News: View curated news articles relevant to your location, complete with summaries and thumbnails.
 
 News Search: Enter keywords or phrases to find specific articles matching your interests.
@@ -29,7 +30,6 @@ Movies: Click the button to discover a random movie suggestion, including title,
 
 Books: Click the button to get a random book recommendation, including title, author, and blurb.
 
-
 ## Installation
 Clone the repository.
 
@@ -39,16 +39,26 @@ Run npm install to install dependencies.
 
 Run npm dev to start the development server.
 
-
 ## Credits 
 A huge gratitude goes out to the bootcamp team for their unwavering support throughout the project, equipping us with the necessary tools for success thus far. The API providers, documentation, and bootstrap have played a significant role in carrying much of the workload for this project.
 
 https://css-loaders.com/ was used for the eyes on the loading animations
 
+## Technologies Used
+Apis used on this project are: 
+https://www.boredapi.com/
+https://www.omdbapi.com/
+https://gnews.io/
+https://api-ninjas.com/api/facts
+https://developers.google.com/books
+
+Libraries used on this project are:
+https://www.npmjs.com/package/random-words
+https://mui.com/
 
 ## Contributors
 
-Amaal Abdule
+Amaal Abdulle
 
 Azza Abdelrahman
 
