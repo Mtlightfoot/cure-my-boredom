@@ -84,7 +84,7 @@ function LocationData({ latitude, longitude }) {
       {loading ? ( // renders loading if it is true
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <div><div class="eyeLoader"></div>
-            <h3>Awaiting Magic Button Press...</h3></div>        </div>
+            <h3>Searching news in your location...</h3></div>        </div>
       ) : (
         // renders cards if loading is false
         <Grid container spacing={2}>

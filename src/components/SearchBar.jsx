@@ -118,7 +118,7 @@ const SearchBar = ({ onSearch, onClear }) => {
         onChange={(e) => setSearchString(e.target.value)}
       />
       <Button
-        style={{ marginRight: "10px", alignItems: "center" }}
+        style={{ marginRight: "10px", alignItems: "center", marginTop: "15px" }}
         onClick={handleSearch}
       >
         Search
