@@ -24,6 +24,22 @@ const News = () => {
             <Grid container spacing={2} sx={{
                 padding: "30px"
             }}>
+
+                <Grid item xs={12} md={6}>
+                    <Item sx={{
+                        minHeight: "30vh"
+                    }}>
+                    <Typography variant="h5" component="h2" sx={{
+                                fontWeight: "800",
+                                marginTop: "20px",
+                                marginBottom: "20px",
+                                color: "#313742",
+                                filter: "drop-shadow(0.5px 1px 0rem #BE3D3E)"
+                            }}>Search a News Topic</Typography>
+                        <FetchData />
+                    </Item>
+                </Grid>
+
                 <Grid item xs={12} md={6}>
                     <Item sx={{
                         minHeight: "70vh"
@@ -38,21 +54,6 @@ const News = () => {
                         </Typography>
                         <Geo setLocation={setLocation} />
                         {location && <LocationData latitude={location.latitude} longitude={location.longitude} />}
-                    </Item>
-                </Grid>
-
-                <Grid item xs={12} md={6}>
-                    <Item sx={{
-                        minHeight: "70vh"
-                    }}>
-                    <Typography variant="h5" component="h2" sx={{
-                                fontWeight: "800",
-                                marginTop: "20px",
-                                marginBottom: "20px",
-                                color: "#313742",
-                                filter: "drop-shadow(0.5px 1px 0rem #BE3D3E)"
-                            }}>Search a News Topic</Typography>
-                        <FetchData />
                     </Item>
                 </Grid>
             </Grid>
