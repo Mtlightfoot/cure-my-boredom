@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { styled } from '@mui/system';
 
+
 const blue = {
   100: '#DAECFF',
   200: '#80BFFF',
@@ -44,10 +45,18 @@ const InputElement = styled('input')(
       border-color: ${blue[400]};
       box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
     }
+    
 
-    // firefox
     &:focus-visible {
       outline: 0;
+    }
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    @media (max-width: 600px) {
+      width: calc(100% - 80px); /* Adjusted width for mobile */
     }
 `,
 );
@@ -113,7 +122,7 @@ const SearchBar = ({ onSearch, onClear }) => {
         type="text"
         id="search-string"
         placeholder="Enter your search"
-        style={{ marginRight: "10px", width: "300px" }}
+        style={{ marginRight: "10px"}}
         value={searchString}
         onChange={(e) => setSearchString(e.target.value)}
       />
