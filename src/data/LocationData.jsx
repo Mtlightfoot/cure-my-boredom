@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Card, CardActionArea, CardContent, Typography, CardMedia, CircularProgress } from '@mui/material';
 
 function LocationData({ latitude, longitude }) {
-    const [articles, setArticles] = useState([]);
-    const [countryCode, setCountryCode] = useState('');
-    const [loading, setLoading] = useState(true); // setting the loading display
+  const [articles, setArticles] = useState([]);
+  const [countryCode, setCountryCode] = useState('');
+  const [loading, setLoading] = useState(true); // setting the loading display
 
   useEffect(() => {
     setLoading(true);
