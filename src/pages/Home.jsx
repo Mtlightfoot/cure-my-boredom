@@ -117,7 +117,7 @@ function Home() {
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       {searchResult.results ? searchResult.results[0].fact : <div><div class="eyeLoader"></div>
-                        <h3>Awaiting Magic Button Press...</h3></div>}
+                        <h3>Generating mind blowing fact...</h3></div>}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
