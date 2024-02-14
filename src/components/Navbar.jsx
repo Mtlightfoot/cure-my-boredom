@@ -153,7 +153,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="#/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
