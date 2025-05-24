@@ -75,7 +75,8 @@ Azza Abdelrahman
 
 Matthew Lightfoot
 
-Lotanna Amboi
+Lotanna Amobi
+
 
 
 ## Screenshot and Links 
